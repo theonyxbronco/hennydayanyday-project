@@ -90,6 +90,23 @@ body a:hover {
 
 
 /*-------------------------------*/
+/* MAIN BG */
+/*-------------------------------*/
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 10;
+}
+
+.logo img {
+    height: 200px;
+    cursor: pointer;
+}
+
+
+
+/*-------------------------------*/
 /* BIG LINE */
 /*-------------------------------*/
 .line {
@@ -150,6 +167,11 @@ body a:hover {
     letter-spacing: 0.04em;
 }
 
+/* active button */
+.active-btn {
+    color: var(--main-accent-color) !important;
+}
+
 .main-button svg {
     float: right;
     margin-top: -1px;
@@ -158,22 +180,179 @@ body a:hover {
 }
 
 /* individual button placements */
+.about-btn {
+    top: 310px;
+    left: 140px;
+    transform: skew(-5deg);
+}
+
 .store-btn {
-    top: 370px;
+    top: 390px;
     left: 130px;
 }
 
 .gallery-btn {
-    top: 450px;
-    left: 124px;
+    top: 470px;
+    left: 125px;
 }
 
 .magazine-btn {
-    top: 530px;
+    top: 550px;
     left: 127px;
 }
 
 
 /*-------------------------------*/
-/* NEXT SECTION */
+/* ABOUT CONTENT */
 /*-------------------------------*/
+.about {
+    position: absolute;
+    width: 50%;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5%;
+    z-index: 10;
+
+    display: none;
+}
+
+.about p {
+    font-family: 'Segoe UI';
+    font-weight: lighter;
+    font-size: 1em;
+    color: var(--main-text-color);
+    text-align: justify;
+}
+
+
+/*-------------------------------*/
+/* CART LAYER */
+/*-------------------------------*/
+.cart-layer {
+    position: fixed;
+    right: 40px;
+    top: 5%;
+    width: 38%;
+    height: 90%;
+    z-index: 10;
+    background-color: var(--second-global-color);
+    border: solid 6px var(--main-global-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.cart-layer .top {
+    padding: 8%;
+    font-family: var(--main-title-font);
+    color: var(--main-text-color);
+}
+
+.cart-layer .cart-content {
+    max-height: 60%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.cart-layer .cart-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cart-layer .cart-content li {
+    margin: 20px;
+    display: block;
+    position: relative;
+}
+
+.cart-layer .cart-content .item-list-container {
+    display: flex;
+    align-items: center;
+}
+
+.cart-layer .cart-content li img {
+    height: 80px;
+}
+
+.cart-layer .cart-content li h2 {
+    font-family: var(--main-title-font);
+    color: var(--main-text-color);
+    font-size: 0.91em;
+    width: 75%;
+    margin-left: 5%;
+    text-wrap: balance;
+    float: right;
+    
+}
+
+.cart-layer .cart-content li p {
+    font-family: var(--main-text-font);
+    font-size: 1em;
+    color: var(--main-text-color);
+    margin-top: 5px;
+}
+
+.cart-layer .cart-checkout {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+
+.cart-layer .cart-checkout button {
+    font-family: var(--main-title-font);
+    background: linear-gradient(180deg, var(--second-global-color) 0%, var(--second-global-color) 100%);
+    padding: 10px 15px;
+    color: var(--main-text-color);
+    font-size: 10px;
+    margin-top: 4px;
+    transform: skew(-12deg);
+    letter-spacing: 0.04em;
+    border: solid 4px var(--main-global-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart-layer .cart-checkout #checkout_button {
+    background: linear-gradient(180deg, var(--main-accent-color) 0%, var(--main-accent-darker-color) 100%);
+}
+
+
+/*-------------------------------*/
+/* ADDED POP UP */
+/*-------------------------------*/
+.item-added-popup {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--second-global-color);
+    padding: 30px;
+    display: none;
+    z-index: 50;
+    border: solid 5px var(--main-accent-color);
+    border-radius: 10px;
+    transform: skew(-4deg);
+}
+
+.item-added-popup p {
+    font-family: var(--main-text-font);
+    color: var(--main-text-color);
+    font-size: 1.1em;
+}
+
+.item-added-popup button {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    border: none;
+    background-color: transparent;
+    font-family: var(--main-text-font);
+    color: var(--main-accent-color);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.item-added-popup button:hover {
+    opacity: .6;
+}

@@ -168,18 +168,19 @@ body a:hover {
 .enter-button {
     position: absolute;
     z-index: 25;
-    bottom: 15%;
+    bottom: 13.5%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .enter-button a {
     font-family: var(--loading-text-font);
-    background: linear-gradient(var(--main-accent-color), var(--main-accent-darker-color));
     font-size: 1.8em;
-    padding: 8px 25px;
-    color: var(--main-text-color);
-    border-radius: 2px;
+    background-image: linear-gradient(#F0F0F0, #7E7E7E);
+    text-shadow: 0px 5px 6px rgba(0, 0, 0, 0.39);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     opacity: 0;
     pointer-events: none;
     animation: fade-in 0.5s;
@@ -189,12 +190,11 @@ body a:hover {
 }
 
 .enter-button a:hover {
-    background: linear-gradient(var(--main-accent-darker-color), var(--main-accent-darker-color));
+    background-image: linear-gradient(#7E7E7E, #7E7E7E);
 }
 
 @keyframes fade-in {
     0% {
-        display: none;
         opacity: 0;
     }
     100% {
