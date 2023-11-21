@@ -93,7 +93,7 @@ const productDetailsMapping = {
     },
 
     //----------------------------//
-    // GREY HOODIES
+    // BROWN HOODIES
     //----------------------------//
     // S
     'price_1O8jR9ENXkUfS20ia1ETLR3z': {

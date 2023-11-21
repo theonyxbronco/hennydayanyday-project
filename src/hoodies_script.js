@@ -123,20 +123,22 @@ class HoodiesProductTab extends HTMLElement {
         });
 
         // Set up listener for the BUY button
-        this.shadowRoot.querySelector('.buy-btn').addEventListener('click', () => {
-            if (!selectedProductId) {
-                alert('Please select a size first.');
-                return;
-            }
+        this.shadowRoot.querySelectorAll('.buy-btn').forEach(buyBtn => {
+            buyBtn.addEventListener('click', () => {
+                if (!selectedProductId) {
+                    alert('Please select a size first.');
+                    return;
+                }
             
-            addToBasket(selectedProductId);
+                addToBasket(selectedProductId);
 
-            // Clear the selected product ID after adding to basket
-            selectedProductId = null;
+                // Clear the selected product ID after adding to basket
+                selectedProductId = null;
             
-            // Optionally clear the selected visual state
-            this.shadowRoot.querySelectorAll('.size-btn').forEach(btn => {
-                btn.classList.remove('selected');
+                // Optionally clear the selected visual state
+                this.shadowRoot.querySelectorAll('.size-btn').forEach(btn => {
+                    btn.classList.remove('selected');
+                });
             });
         });
 

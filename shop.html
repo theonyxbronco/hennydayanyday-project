@@ -16,12 +16,34 @@
     <link rel="shortcut icon" type="image/png" href="images/logo-icon.png">
 </head>
 <body>
+
+    <!-- LOADING... -->
+    <div class="loading" id="loading">
+        <div class="loading-bg">
+            <video id="loading_bg_video" src="https://fizionstudios.com/other_material/dark_blue_particles.mov" autoplay muted loop controls></video>
+            <!-- Video Playback Speed 0.4x -->
+            <script>
+                const video2 = document.getElementById('loading_bg_video');
+        
+                // Set the playback rate to a slower speed (e.g., 0.5 for half speed)
+                video2.playbackRate = 0.5; // Adjust this value as needed
+            </script>
+            <div class="blur"></div>
+        </div>
+        <div class="logo-container">
+             <img id="loading_img" src="images/logo-main.png" alt="">
+        </div>
+        <div class="pixel-texture">
+            <img src="images/pixel-texture-1.png" alt="">
+        </div>
+    </div>
+
     
     <!-------------------------------------->
     <!-- BACKGROUND -->
     <!-------------------------------------->
     <div class="bg-video">
-        <video id="bg_video" src="images/dark_blue_particles.mov" autoplay muted loop controls></video>
+        <video id="bg_video" src="https://fizionstudios.com/other_material/dark_blue_particles.mov" autoplay muted loop controls></video>
         <!-- Video Playback Speed 0.4x -->
         <script>
             const video = document.getElementById('bg_video');

@@ -1,4 +1,82 @@
 /*-------------------------------*/
+/* LOADING STYLE */
+/*-------------------------------*/
+.loading {
+    height: 100%;
+    width: 100%;
+    z-index: 98;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.loading.hidden {
+    -webkit-animation: fadeOut 0.8s;
+    animation: fadeOut 0.8s;
+    animation-delay: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.loading .loading-bg {
+    height: 100%;
+    width: 100%;
+}
+
+.loading .logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+}
+
+.loading .logo-container img {
+    height: 400px;    
+}
+
+.loading video {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.loading .blur {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(40px);
+    z-index: 2;
+}
+
+.loading .pixel-texture {
+    position: fixed;
+    z-index: 98;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.loading .pixel-texture img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*-------------------------------*/
 /* MAIN BUTTONS */
 /*-------------------------------*/
 .main-button button:active {
