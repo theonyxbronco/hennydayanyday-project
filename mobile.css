@@ -1,0 +1,85 @@
+@media (max-width: 500px) {
+
+    .loading .logo-container img {
+        height: auto;
+        width: 100%;    
+    }  
+
+    .loading video {
+        width: auto;
+        height: 100%;
+    }
+
+
+    .bg-video video {
+        width: auto;
+        height: 100%;
+    }
+
+
+    .logo {
+        width: 100%;
+        left: 0;
+        top: 5%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .logo img {
+        height: 140px;
+    }
+
+
+    .line {
+        display: none;
+        left: 0;
+    }
+
+    .line img {
+        height: 0px;
+    }
+
+
+    .nav-container {
+        top: 240px;
+        right: 0;
+    }
+    
+    .about-btn {
+        top: 0;
+        left: -300px;
+        transform: skew(-5deg);
+    }
+    
+    .store-btn {
+        top: 60px;
+        left: -300px;
+    }
+    
+    .gallery-btn {
+        top: 120px;
+        left: -300px;
+    }
+    
+    .magazine-btn {
+        top: 180px;
+        left: -300px;
+    }
+
+
+    .default-page {
+        transform: translateY(0%);
+    }
+
+    .default-page h3 {
+        font-size: 1em;
+    }
+
+
+    .default-page {
+        width: 90%;
+        right: 0;
+        top: 70%;
+        transform: translateY(0%);
+    }
+}

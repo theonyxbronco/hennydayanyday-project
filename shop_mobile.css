@@ -1,0 +1,100 @@
+@media (max-width: 500px) {
+    html, body {
+        height: auto;
+    }
+
+    body {
+        background-image: url("images/background-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 160%;
+    }
+
+    .loading .logo-container img {
+        height: auto;
+        width: 100%;    
+    }  
+
+    .loading video {
+        width: auto;
+        height: 100%;
+    }
+
+
+    .bg-video {
+        width: 100%;
+        height: auto;
+    }
+
+    .bg-video video {
+        height: auto;
+        width: 100%;
+    }
+
+
+    .logo {
+        width: 100%;
+        left: 0;
+        top: 5%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .logo img {
+        height: 140px;
+    }
+
+
+    .line {
+        display: none;
+        left: 0;
+    }
+
+    .line img {
+        height: 0px;
+    }
+    
+
+    .back-button {
+        display: none;
+    }
+
+    .back-button-btn {
+        display: none;
+    }
+
+
+    .nav-container {
+        top: 240px;
+        right: 0;
+    }
+    
+    .about-btn {
+        top: 0;
+        left: -300px;
+        transform: skew(-5deg);
+    }
+    
+    .store-btn {
+        top: 60px;
+        left: -300px;
+    }
+    
+    .gallery-btn {
+        top: 120px;
+        left: -300px;
+    }
+    
+    .magazine-btn {
+        top: 180px;
+        left: -300px;
+    }
+
+
+    .product-group {
+        width: 90%;
+        right: 5%;
+        top: 560px;
+    }
+}

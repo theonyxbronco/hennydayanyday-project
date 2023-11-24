@@ -144,8 +144,8 @@ body a:hover {
 /*-------------------------------*/
 .bg-video {
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     z-index: 1;
 }
@@ -245,9 +245,8 @@ body a:hover {
     letter-spacing: 0.04em;
 }
 
-/* active button */
-.active-btn {
-    color: var(--main-accent-color) !important;
+.highlighted-btn {
+    color: var(--main-accent-color) !important; /* Yellow color */
 }
 
 .main-button svg {
@@ -283,7 +282,7 @@ body a:hover {
 /*-------------------------------*/
 /* ABOUT CONTENT */
 /*-------------------------------*/
-.about {
+.default-page {
     position: absolute;
     width: 50%;
     right: 3%;
@@ -291,16 +290,26 @@ body a:hover {
     transform: translateY(-50%);
     padding: 5%;
     z-index: 10;
-
-    display: none;
 }
 
-.about p {
-    font-family: 'Segoe UI';
+.default-page h3 {
+    font-family: var(--main-title-font);
     font-weight: lighter;
-    font-size: 1em;
+    font-size: 2em;
     color: var(--main-text-color);
-    text-align: justify;
+    text-align: center;
+}
+
+.default-page p {
+    font-family: var(--main-text-font);
+    font-weight: lighter;
+    font-size: 1.4em;
+    color: var(--main-text-color);
+    text-align: center;
+}
+
+.hidden-section {
+    display: none;
 }
 
 
