@@ -74,33 +74,6 @@ accessoriesTemplate.innerHTML = `
         </div>
         
     </div>
-
-
-    <style>
-    .item .product-body .product-display img {
-        height: auto;
-        width: 100%;
-    }
-
-    .item .product-body .shine img {
-        height: auto;
-        width: 100%;
-    }
-
-    .item .product-body .shine {
-        position: absolute;
-        top: 280px;
-        left: 0;
-    }
-
-    .item .product-body .product-display {
-        margin-top: 60%;
-    }
-
-    .item .product-body .product-description {
-        margin-top: 40%;
-    }
-    </style>
 `
 
 class AccessoriesProductTab extends HTMLElement {

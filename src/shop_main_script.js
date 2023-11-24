@@ -5,6 +5,32 @@ window.addEventListener("load", function() {
 });
 
 
+function adjustVideoContainerHeight() {
+    // Get the width of the viewport
+    const viewportWidth = window.innerWidth;
+
+    // Check if the viewport width is less than 500px
+    if (viewportWidth < 500) {
+        const bodyHeight = document.body.scrollHeight;
+        const viewportHeight = window.innerHeight;
+        const videoContainer = document.querySelector('.bg-video');
+        const padding = 30;
+        videoContainer.style.height = `${Math.max(bodyHeight, viewportHeight) + padding}px`;
+    } else {
+        // If the viewport width is 500px or greater, reset any inline styles
+        const videoContainer = document.querySelector('.bg-video');
+        videoContainer.style.height = '';
+    }
+}
+
+window.onload = adjustVideoContainerHeight;
+window.onresize = adjustVideoContainerHeight;
+
+
+const observer = new MutationObserver(adjustVideoHeight);
+observer.observe(document.body, { childList: true, subtree: true });
+
+
 /*-------------------------------------------------*/
 /* PRODUCT-TAB DISPLAY */
 /*-------------------------------------------------*/

@@ -9,6 +9,9 @@
     overflow: hidden;
     top: 0;
     left: 0;
+    background-image: url("images/background-static.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .loading.hidden {
@@ -40,25 +43,45 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 50;
+    text-align: center;
 }
 
 .loading .logo-container img {
     height: 400px;    
 }
 
-.loading video {
-    width: 100%;
-    position: fixed;
-    z-index: 1;
+.loading .logo-container p {
+    font-family: var(--loading-text-font);
+    text-shadow: 0px 5px 6px rgba(0, 0, 0, 0.39);
+    background-image: linear-gradient(var(--main-accent-color), var(--main-accent-darker-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.8em;
+    animation: blink 5.5s;
+    animation-fill-mode: forwards;
 }
 
-.loading .blur {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(40px);
-    z-index: 2;
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
 }
 
 .loading .pixel-texture {
